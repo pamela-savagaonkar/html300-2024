@@ -1,0 +1,114 @@
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background-color: #f0f0f0;
+}
+
+.windmill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 350px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.windmill-box:hover {
+  transform: scale(1.05);
+  background-color: #f9ff96;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.windmill {
+  position: relative;
+  width: 100px;
+  height: 250px;
+}
+.windmill__base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 150px;
+  background-color: #333;
+  transform: translateX(-50%);
+}
+.windmill__blades-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.windmill__blades {
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 50%;
+}
+.windmill__blade {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform-origin: 100% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0% 50%);
+  z-index: 1;
+}
+.windmill__blade--one {
+  background-color: #7F58AF;
+  transform: rotate(0deg);
+}
+.windmill__blade--two {
+  background-color: #64C5EB;
+  transform: rotate(90deg);
+}
+.windmill__blade--three {
+  background-color: #E84D8A;
+  transform: rotate(180deg);
+}
+.windmill__blade--four {
+  background-color: #FEB326;
+  transform: rotate(270deg);
+}
+.windmill--normal .windmill__blades {
+  animation: rotate-blades 3s linear infinite;
+}
+.windmill--fast .windmill__blades {
+  animation: rotate-blades 1s linear infinite;
+}
+.windmill--fastest .windmill__blades {
+  animation: rotate-blades 0.5s linear infinite;
+}
+
+.windmill-label {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+@keyframes rotate-blades {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}

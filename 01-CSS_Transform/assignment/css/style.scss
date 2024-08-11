@@ -1,0 +1,148 @@
+// Define the four colors to be used for all windmill blades
+$color-blade-one: #7F58AF;  // Purple
+$color-blade-two: #64C5EB;  // Light Blue
+$color-blade-three: #E84D8A;  // Pink
+$color-blade-four: #FEB326;  // Yellow
+
+// Size Variables
+$windmill-width: 100px;
+$windmill-height: 250px;
+$blade-width: 50px;
+$blade-height: 50px;
+$base-width: 10px;
+$base-height: 150px;
+
+// Other Variables
+$box-width: 150px;
+$box-height: 350px;
+
+// Mixin for rotation animation
+@mixin rotate-blades($duration) {
+    animation: rotate-blades $duration linear infinite;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 80px); // Adjust for the header height
+    background-color: #f0f0f0;
+}
+
+.windmill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $box-width;
+    height: $box-height;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; // Smooth transition for hover effects
+
+    &:hover {
+      transform: scale(1.05); // Slightly expand the box
+      background-color: #f9ff96; // Soft neon yellow background color
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Enhance shadow for depth
+    }
+}
+
+.windmill {
+    position: relative;
+    width: $windmill-width;
+    height: $windmill-height;
+
+    &__base {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: $base-width;
+        height: $base-height;
+        background-color: #333;
+        transform: translateX(-50%);
+    }
+
+    &__blades-wrapper {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__blades {
+        width: $windmill-width;
+        height: $windmill-width;
+        transform-origin: 50% 50%;
+    }
+
+    &__blade {
+        position: absolute;
+        width: $blade-width;
+        height: $blade-height;
+        transform-origin: 100% 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0% 50%);
+        z-index: 1;
+
+        // Starting location for each blade, using the same four colors for all windmills
+        &--one {
+            background-color: $color-blade-one;
+            transform: rotate(0deg);
+        }
+        &--two {
+            background-color: $color-blade-two;
+            transform: rotate(90deg);
+        }
+        &--three {
+            background-color: $color-blade-three;
+            transform: rotate(180deg);
+        }
+        &--four {
+            background-color: $color-blade-four;
+            transform: rotate(270deg);
+        }
+    }
+
+    &--normal .windmill__blades {
+        @include rotate-blades(3s);
+    }
+
+    &--fast .windmill__blades {
+        @include rotate-blades(1s);
+    }
+
+    &--fastest .windmill__blades {
+        @include rotate-blades(0.5s);
+    }
+}
+
+.windmill-label {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+@keyframes rotate-blades {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    text-align: center;  // Ensure the text inside the header is centered
+    margin: 20px 0;      // Add some vertical spacing
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    display: block;         // Ensure it's a block-level element
+    width: 100%;            // Take up full width of the container
+    text-align: center;     // Center the text within the block
+}
