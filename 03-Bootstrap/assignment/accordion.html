@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Healthy Food FAQ</title>
+</head>
+<body>
+    <main class="main">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Healthy Bites</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="images.html">Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grid.html">Grid Layout</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="accordion.html">Accordion <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Accordion Section -->
+        <section class="container mt-5">
+            <h1 class="mb-4">Healthy Food: Frequently Asked Questions</h1>
+
+            <div class="accordion" id="accordionExample">
+                <!-- First Accordion Item -->
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Why did my parents always try to feed me brussels sprouts?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Ah, the age-old mystery! Parents have been trying to convince kids to eat their brussels sprouts for generations. Turns out, they're packed with nutrients that help you grow big and strong! Plus, it's a rite of passage to learn how to avoid them on your plate—until you discover how delicious they are when roasted with a bit of olive oil and garlic!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Accordion Item -->
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Is it true that eating carrots will help me see in the dark?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            While you won’t gain superhero night vision from munching on carrots, they do contain beta-carotene, which your body converts to vitamin A—a key nutrient for good vision. So, while carrots might not turn you into Batman, they definitely help keep your eyes healthy!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Accordion Item -->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                If I eat too much spinach, will I turn into Popeye?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Not exactly! But spinach is rich in iron and other nutrients that are great for your muscles. While you won’t sprout bulging biceps immediately, eating spinach will help keep you strong and healthy—just like our sailor friend!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Accordion Item -->
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Why does kale always end up in my salad?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Kale is like the overachiever of the vegetable world. It’s packed with vitamins, minerals, and fiber, making it a superfood. Plus, its slightly bitter taste adds a nice contrast to sweeter salad ingredients. So, it’s not just a trend—kale is here to stay in your salad bowl!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
