@@ -1,0 +1,8 @@
+.bg-light-orange {
+    background-color: #FFDAB9; /* Light orange color */
+}
+
+.carousel-item img {
+    max-height: 400px; /* Adjust the height as needed */
+    object-fit: cover;
+}
