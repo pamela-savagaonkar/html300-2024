@@ -1,15 +1,22 @@
 {
   "name": "html300-2024",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "In the last assignment in lesson06, you created a responsive website with Bootstrap 4. In this assignment, you'll convert those pages and rebuild them using Vue.js.",
+  "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^3.5.11",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -19,6 +26,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^6.1.1",
     "vue-template-compiler": "^2.6.14"
   }
 }
