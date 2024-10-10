@@ -1,0 +1,11 @@
+title: "UW Work"
+description: "A collection of projects for UW front end"
+baseurl: "" # Leave this empty unless you're deploying to a subdirectory
+url: "https://yourgithubusername.github.io" # Update with your GitHub Pages URL
+theme: jekyll-theme-minimal # Optional: You can choose a different theme
+
+exclude:
+  - node_modules # This ensures Jekyll doesn't process files in node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
